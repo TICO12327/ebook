@@ -105,9 +105,15 @@ private final class OPDSXMLParser: NSObject, XMLParserDelegate {
 
             let url = URL(string: href, relativeTo: baseURL)?.absoluteURL
             if type.contains("image") || rel.contains("image") {
-                currentEntry?.coverURL = currentEntry?.coverURL ?? url
+                if var entry = currentEntry, entry.coverURL == nil {
+                    entry.coverURL = url
+                    currentEntry = entry
+                }
             } else if rel.contains("acquisition") || href.lowercased().hasSuffix(".epub") {
-                currentEntry?.acquisitionURL = currentEntry?.acquisitionURL ?? url
+                if var entry = currentEntry, entry.acquisitionURL == nil {
+                    entry.acquisitionURL = url
+                    currentEntry = entry
+                }
             }
         default:
             break
@@ -129,36 +135,40 @@ private final class OPDSXMLParser: NSObject, XMLParserDelegate {
         let text = textStack.last?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let parent = elementStack.dropLast().last
 
-        if currentEntry != nil {
+        if var entry = currentEntry {
             switch name {
             case "id":
-                if currentEntry?.id.isEmpty == true { currentEntry?.id = text }
+                if entry.id.isEmpty { entry.id = text }
             case "title":
                 if parent == "entry", !text.isEmpty {
-                    currentEntry?.title = currentEntry?.title.isEmpty == true ? text : currentEntry?.title ?? text
+                    if entry.title.isEmpty {
+                        entry.title = text
+                    }
                 }
             case "name":
                 if parent == "author", !text.isEmpty {
-                    currentEntry?.author = text
+                    entry.author = text
                 }
             case "content", "summary":
                 if !text.isEmpty {
-                    currentEntry?.summary = text
+                    entry.summary = text
                 }
             case "language":
                 if !text.isEmpty {
-                    currentEntry?.language = text
+                    entry.language = text
                 }
             case "entry":
-                if let builder = currentEntry {
-                    let entry = builder.build()
-                    if !entry.title.isEmpty {
-                        entries.append(entry)
-                    }
+                let built = entry.build()
+                if !built.title.isEmpty {
+                    entries.append(built)
                 }
                 currentEntry = nil
             default:
                 break
+            }
+
+            if currentEntry != nil {
+                currentEntry = entry
             }
         } else if name == "title", parent == "feed", feedTitle.isEmpty {
             feedTitle = text

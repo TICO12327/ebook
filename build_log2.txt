@@ -1,0 +1,377 @@
+﻿2026-09-17T13:16:45.4790220Z Current runner version: '2.337.0'
+2026-09-17T13:16:45.4803770Z ##[group]Runner Image Provisioner
+2026-09-17T13:16:45.4804330Z Hosted Compute Agent
+2026-09-17T13:16:45.4804780Z Version: 20260828.587
+2026-09-17T13:16:45.4805150Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-17T13:16:45.4805670Z Build Date: 2026-08-28T16:44:25Z
+2026-09-17T13:16:45.4806170Z Worker ID: {77e09b59-07df-44d1-8738-b8e8226e82dc}
+2026-09-17T13:16:45.4806630Z Azure Region: westus
+2026-09-17T13:16:45.4806980Z ##[endgroup]
+2026-09-17T13:16:45.4807790Z ##[group]Operating System
+2026-09-17T13:16:45.4808200Z macOS
+2026-09-17T13:16:45.4808570Z 15.7.9
+2026-09-17T13:16:45.4808980Z 24G830
+2026-09-17T13:16:45.4809400Z ##[endgroup]
+2026-09-17T13:16:45.4809840Z ##[group]Runner Image
+2026-09-17T13:16:45.4810220Z Image: macos-15-arm64
+2026-09-17T13:16:45.4810560Z Version: 20260907.0337.1
+2026-09-17T13:16:45.4811330Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+2026-09-17T13:16:45.4850460Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+2026-09-17T13:16:45.4851110Z ##[endgroup]
+2026-09-17T13:16:45.4851830Z ##[group]GITHUB_TOKEN Permissions
+2026-09-17T13:16:45.4853120Z Contents: read
+2026-09-17T13:16:45.4853450Z Metadata: read
+2026-09-17T13:16:45.4853760Z Packages: read
+2026-09-17T13:16:45.4854100Z ##[endgroup]
+2026-09-17T13:16:45.4855510Z Secret source: Actions
+2026-09-17T13:16:45.4856020Z Cache mode: write
+2026-09-17T13:16:45.4856580Z Prepare workflow directory
+2026-09-17T13:16:45.5087430Z Prepare all required actions
+2026-09-17T13:16:45.5122160Z Getting action download info
+2026-09-17T13:16:45.6688270Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-17T13:16:45.8467410Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-17T13:16:46.0095620Z Complete job name: build
+2026-09-17T13:16:46.0539090Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T13:16:46.0545210Z ##[group]Run actions/checkout@v4
+2026-09-17T13:16:46.0545710Z with:
+2026-09-17T13:16:46.0546020Z   repository: TICO12327/ebook
+2026-09-17T13:16:46.0548740Z   token: ***
+2026-09-17T13:16:46.0549040Z   ssh-strict: true
+2026-09-17T13:16:46.0549350Z   ssh-user: git
+2026-09-17T13:16:46.0549670Z   persist-credentials: true
+2026-09-17T13:16:46.0550020Z   clean: true
+2026-09-17T13:16:46.0550340Z   sparse-checkout-cone-mode: true
+2026-09-17T13:16:46.0550730Z   fetch-depth: 1
+2026-09-17T13:16:46.0551050Z   fetch-tags: false
+2026-09-17T13:16:46.0551370Z   show-progress: true
+2026-09-17T13:16:46.0551740Z   lfs: false
+2026-09-17T13:16:46.0552110Z   submodules: false
+2026-09-17T13:16:46.0552480Z   set-safe-directory: true
+2026-09-17T13:16:46.0552900Z   allow-unsafe-pr-checkout: false
+2026-09-17T13:16:46.0553380Z ##[endgroup]
+2026-09-17T13:16:46.1897250Z Syncing repository: TICO12327/ebook
+2026-09-17T13:16:46.1898650Z ##[group]Getting Git version info
+2026-09-17T13:16:46.1899140Z Working directory is '/Users/runner/work/ebook/ebook'
+2026-09-17T13:16:46.1899870Z [command]/opt/homebrew/bin/git version
+2026-09-17T13:16:46.2336330Z git version 2.55.0
+2026-09-17T13:16:46.2346990Z ##[endgroup]
+2026-09-17T13:16:46.2353120Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/742cddd5-fe24-4a5b-9a02-b488fb06766d/.gitconfig'
+2026-09-17T13:16:46.2361550Z Temporarily overriding HOME='/Users/runner/work/_temp/742cddd5-fe24-4a5b-9a02-b488fb06766d' before making global git config changes
+2026-09-17T13:16:46.2362550Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T13:16:46.2365810Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/ebook/ebook
+2026-09-17T13:16:46.2453840Z Deleting the contents of '/Users/runner/work/ebook/ebook'
+2026-09-17T13:16:46.2456860Z ##[group]Initializing the repository
+2026-09-17T13:16:46.2460090Z [command]/opt/homebrew/bin/git init /Users/runner/work/ebook/ebook
+2026-09-17T13:16:46.2622490Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-17T13:16:46.2624330Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-17T13:16:46.2625910Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-17T13:16:46.2627440Z hint: call:
+2026-09-17T13:16:46.2627800Z hint:
+2026-09-17T13:16:46.2628200Z hint: 	git config --global init.defaultBranch <name>
+2026-09-17T13:16:46.2628650Z hint:
+2026-09-17T13:16:46.2629060Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-17T13:16:46.2648220Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-17T13:16:46.2648780Z hint:
+2026-09-17T13:16:46.2649080Z hint: 	git branch -m <name>
+2026-09-17T13:16:46.2649400Z hint:
+2026-09-17T13:16:46.2649810Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-17T13:16:46.2650430Z Initialized empty Git repository in /Users/runner/work/ebook/ebook/.git/
+2026-09-17T13:16:46.2651680Z [command]/opt/homebrew/bin/git remote add origin https://github.com/TICO12327/ebook
+2026-09-17T13:16:46.2754440Z ##[endgroup]
+2026-09-17T13:16:46.2756020Z ##[group]Disabling automatic garbage collection
+2026-09-17T13:16:46.2765260Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-09-17T13:16:46.2878620Z ##[endgroup]
+2026-09-17T13:16:46.2880000Z ##[group]Setting up auth
+2026-09-17T13:16:46.2887650Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T13:16:46.2944460Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T13:16:46.3877220Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T13:16:46.3935620Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T13:16:46.4662920Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T13:16:46.4724220Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T13:16:46.5591780Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-17T13:16:46.5652920Z ##[endgroup]
+2026-09-17T13:16:46.5653490Z ##[group]Fetching the repository
+2026-09-17T13:16:46.5657930Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bdb9acf2909514be3f22a222a1b0b1cc876e3cfa:refs/remotes/origin/main
+2026-09-17T13:16:47.3380220Z From https://github.com/TICO12327/ebook
+2026-09-17T13:16:47.3381110Z  * [new ref]         bdb9acf2909514be3f22a222a1b0b1cc876e3cfa -> origin/main
+2026-09-17T13:16:47.3382940Z ##[endgroup]
+2026-09-17T13:16:47.3383560Z ##[group]Determining the checkout info
+2026-09-17T13:16:47.3385410Z ##[endgroup]
+2026-09-17T13:16:47.3390470Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-09-17T13:16:47.3448690Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-17T13:16:47.3514730Z ##[group]Checking out the ref
+2026-09-17T13:16:47.3527610Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-09-17T13:16:47.3668970Z Switched to a new branch 'main'
+2026-09-17T13:16:47.3675590Z branch 'main' set up to track 'origin/main'.
+2026-09-17T13:16:47.3679350Z ##[endgroup]
+2026-09-17T13:16:47.3741510Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-09-17T13:16:47.3783640Z bdb9acf2909514be3f22a222a1b0b1cc876e3cfa
+2026-09-17T13:16:47.3978280Z ##[group]Run brew install xcodegen
+2026-09-17T13:16:47.3979090Z [36;1mbrew install xcodegen[0m
+2026-09-17T13:16:47.4046330Z shell: /bin/bash -e {0}
+2026-09-17T13:16:47.4047000Z ##[endgroup]
+2026-09-17T13:16:49.0205230Z [32m==>[0m [1mDownloading bottle manifests[0m
+2026-09-17T13:16:49.0273580Z ✔︎ Bottle Manifest xcodegen (2.46.0)
+2026-09-17T13:16:49.0275260Z [34m==>[0m [1mWould install 1 formula:[0m
+2026-09-17T13:16:49.0275660Z xcodegen
+2026-09-17T13:16:49.0287210Z [32m==>[0m [1mFetching downloads for: [32mxcodegen[39m[0m
+2026-09-17T13:16:49.3452300Z ✔︎ Bottle xcodegen (2.46.0)
+2026-09-17T13:16:49.3620750Z [34m==>[0m [1mPouring xcodegen--2.46.0.arm64_sequoia.bottle.1.tar.gz[0m
+2026-09-17T13:16:49.4348430Z 🍺  /opt/homebrew/Cellar/xcodegen/2.46.0: 38 files, 7.5MB
+2026-09-17T13:16:49.4451400Z ##[group]Run xcodegen generate
+2026-09-17T13:16:49.4451730Z [36;1mxcodegen generate[0m
+2026-09-17T13:16:49.4480270Z shell: /bin/bash -e {0}
+2026-09-17T13:16:49.4480480Z ##[endgroup]
+2026-09-17T13:16:49.4852080Z ⚙️  Generating plists...
+2026-09-17T13:16:49.4860490Z ⚙️  Generating project...
+2026-09-17T13:16:49.4954090Z ⚙️  Writing project...
+2026-09-17T13:16:49.5013670Z Created project at /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:49.5047130Z ##[group]Run set -o pipefail
+2026-09-17T13:16:49.5047410Z [36;1mset -o pipefail[0m
+2026-09-17T13:16:49.5047590Z [36;1mxcodebuild \[0m
+2026-09-17T13:16:49.5047800Z [36;1m  -project YueDu.xcodeproj \[0m
+2026-09-17T13:16:49.5048060Z [36;1m  -scheme YueDu \[0m
+2026-09-17T13:16:49.5048260Z [36;1m  -configuration Release \[0m
+2026-09-17T13:16:49.5048510Z [36;1m  -sdk iphoneos \[0m
+2026-09-17T13:16:49.5048710Z [36;1m  -derivedDataPath build \[0m
+2026-09-17T13:16:49.5048940Z [36;1m  CODE_SIGN_IDENTITY="" \[0m
+2026-09-17T13:16:49.5049200Z [36;1m  CODE_SIGNING_REQUIRED=NO \[0m
+2026-09-17T13:16:49.5049450Z [36;1m  CODE_SIGNING_ALLOWED=NO \[0m
+2026-09-17T13:16:49.5049650Z [36;1m  build[0m
+2026-09-17T13:16:49.5079460Z shell: /bin/bash -e {0}
+2026-09-17T13:16:49.5079650Z ##[endgroup]
+2026-09-17T13:16:50.2114780Z Command line invocation:
+2026-09-17T13:16:50.2117000Z     /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project YueDu.xcodeproj -scheme YueDu -configuration Release -sdk iphoneos -derivedDataPath build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
+2026-09-17T13:16:50.2119240Z 
+2026-09-17T13:16:50.2119380Z Build settings from command line:
+2026-09-17T13:16:50.2119580Z     CODE_SIGN_IDENTITY = 
+2026-09-17T13:16:50.2119850Z     CODE_SIGNING_ALLOWED = NO
+2026-09-17T13:16:50.2120040Z     CODE_SIGNING_REQUIRED = NO
+2026-09-17T13:16:50.2120220Z     SDKROOT = iphoneos18.5
+2026-09-17T13:16:50.2120330Z 
+2026-09-17T13:16:52.0200790Z --- xcodebuild: WARNING: Using the first of multiple matching destinations:
+2026-09-17T13:16:52.0201480Z { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+2026-09-17T13:16:52.0202150Z { platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:3b15e55678bd7ca0688c1acd793afa699a1387a1, name:My Mac }
+2026-09-17T13:16:52.0203000Z { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+2026-09-17T13:16:52.0871580Z note: Using codesigning identity override: 
+2026-09-17T13:16:53.0253580Z ComputePackagePrebuildTargetDependencyGraph
+2026-09-17T13:16:53.0860230Z 
+2026-09-17T13:16:53.0895660Z Prepare packages
+2026-09-17T13:16:53.0946630Z 
+2026-09-17T13:16:53.0966760Z CreateBuildRequest
+2026-09-17T13:16:53.0994070Z 
+2026-09-17T13:16:53.1052480Z SendProjectDescription
+2026-09-17T13:16:53.1085830Z 
+2026-09-17T13:16:53.1117050Z CreateBuildOperation
+2026-09-17T13:16:53.1138530Z 
+2026-09-17T13:16:53.1167860Z ComputeTargetDependencyGraph
+2026-09-17T13:16:53.1280760Z note: Building targets in dependency order
+2026-09-17T13:16:53.1302010Z note: Target dependency graph (1 target)
+2026-09-17T13:16:53.1302630Z     Target 'YueDu' in project 'YueDu' (no dependencies)
+2026-09-17T13:16:53.1303300Z 
+2026-09-17T13:16:53.1303830Z GatherProvisioningInputs
+2026-09-17T13:16:53.1304230Z 
+2026-09-17T13:16:53.1397590Z CreateBuildDescription
+2026-09-17T13:16:53.1603010Z 
+2026-09-17T13:16:53.1604610Z ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+2026-09-17T13:16:53.4447460Z 
+2026-09-17T13:16:53.4452290Z ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/ebook/ebook/YueDu/Resources/Assets.xcassets
+2026-09-17T13:16:55.1667680Z 
+2026-09-17T13:16:55.1671540Z ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+2026-09-17T13:16:55.1752940Z 
+2026-09-17T13:16:55.1778330Z ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+2026-09-17T13:16:55.9776850Z 
+2026-09-17T13:16:55.9874220Z ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+2026-09-17T13:16:56.1271910Z 
+2026-09-17T13:16:56.1414640Z Build description signature: d80b73a72534a76fb912b736250bdd01
+2026-09-17T13:16:56.1415420Z Build description path: /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/XCBuildData/d80b73a72534a76fb912b736250bdd01.xcbuilddata
+2026-09-17T13:16:56.1901980Z ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk /Users/runner/work/ebook/ebook/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+2026-09-17T13:16:56.1904780Z     cd /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:56.1905970Z     /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -o /Users/runner/work/ebook/ebook/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+2026-09-17T13:16:58.0141290Z 
+2026-09-17T13:16:58.0243230Z CreateBuildDirectory /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex
+2026-09-17T13:16:58.0343100Z     cd /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:58.0388250Z     builtin-create-build-directory /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex
+2026-09-17T13:16:58.0489060Z 
+2026-09-17T13:16:58.0558200Z CreateBuildDirectory /Users/runner/work/ebook/ebook/build/Build/Products
+2026-09-17T13:16:58.0605710Z     cd /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:58.0672920Z     builtin-create-build-directory /Users/runner/work/ebook/ebook/build/Build/Products
+2026-09-17T13:16:58.0702400Z 
+2026-09-17T13:16:58.0717740Z CreateBuildDirectory /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos
+2026-09-17T13:16:58.0752970Z     cd /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:58.0764210Z     builtin-create-build-directory /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos
+2026-09-17T13:16:58.0768070Z 
+2026-09-17T13:16:58.0770550Z CreateBuildDirectory /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+2026-09-17T13:16:58.0772500Z     cd /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:58.0774520Z     builtin-create-build-directory /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+2026-09-17T13:16:58.0776260Z 
+2026-09-17T13:16:58.0779360Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu-ad43352493718bde70b53431981b82d3-VFS-iphoneos/all-product-headers.yaml
+2026-09-17T13:16:58.0781380Z     cd /Users/runner/work/ebook/ebook/YueDu.xcodeproj
+2026-09-17T13:16:58.0783980Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu-ad43352493718bde70b53431981b82d3-VFS-iphoneos/all-product-headers.yaml
+2026-09-17T13:16:58.0786410Z 
+2026-09-17T13:16:58.0791420Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu.hmap (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0794020Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0808670Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu.hmap
+2026-09-17T13:16:58.0822450Z 
+2026-09-17T13:16:58.0832070Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu.DependencyStaticMetadataFileList (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0835950Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0849820Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu.DependencyStaticMetadataFileList
+2026-09-17T13:16:58.0861000Z 
+2026-09-17T13:16:58.0861960Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu.DependencyMetadataFileList (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0862710Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0863220Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu.DependencyMetadataFileList
+2026-09-17T13:16:58.0863700Z 
+2026-09-17T13:16:58.0864210Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-project-headers.hmap (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0864860Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0865320Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-project-headers.hmap
+2026-09-17T13:16:58.0865740Z 
+2026-09-17T13:16:58.0866220Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-own-target-headers.hmap (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0866860Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0867320Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-own-target-headers.hmap
+2026-09-17T13:16:58.0867750Z 
+2026-09-17T13:16:58.0868240Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-generated-files.hmap (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0868850Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0869340Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-generated-files.hmap
+2026-09-17T13:16:58.0869760Z 
+2026-09-17T13:16:58.0870260Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-target-headers.hmap (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0870890Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0871370Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-target-headers.hmap
+2026-09-17T13:16:58.0871810Z 
+2026-09-17T13:16:58.0872750Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-non-framework-target-headers.hmap (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0873450Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0873970Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-non-framework-target-headers.hmap
+2026-09-17T13:16:58.0874460Z 
+2026-09-17T13:16:58.0875030Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu_const_extract_protocols.json (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0875720Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0876270Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu_const_extract_protocols.json
+2026-09-17T13:16:58.0876780Z 
+2026-09-17T13:16:58.0877290Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.SwiftFileList (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0877950Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0878670Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.SwiftFileList
+2026-09-17T13:16:58.0879140Z 
+2026-09-17T13:16:58.0879700Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.SwiftConstValuesFileList (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0880390Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0880910Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.SwiftConstValuesFileList
+2026-09-17T13:16:58.0881500Z 
+2026-09-17T13:16:58.0882010Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.LinkFileList (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0882660Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0883170Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.LinkFileList
+2026-09-17T13:16:58.0883620Z 
+2026-09-17T13:16:58.0884160Z WriteAuxiliaryFile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu-OutputFileMap.json (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0884850Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0885360Z     write-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu-OutputFileMap.json
+2026-09-17T13:16:58.0885840Z 
+2026-09-17T13:16:58.0886130Z MkDir /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0886570Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0886910Z     /bin/mkdir -p /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app
+2026-09-17T13:16:58.0887200Z 
+2026-09-17T13:16:58.0887650Z MkDir /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/thinned (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0888210Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0888690Z     /bin/mkdir -p /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/thinned
+2026-09-17T13:16:58.0889110Z 
+2026-09-17T13:16:58.0889710Z MkDir /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/unthinned (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0890290Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0890750Z     /bin/mkdir -p /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/unthinned
+2026-09-17T13:16:58.0891160Z 
+2026-09-17T13:16:58.0891450Z GenerateAssetSymbols /Users/runner/work/ebook/ebook/YueDu/Resources/Assets.xcassets (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0891880Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0896250Z     /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/ebook/ebook/YueDu/Resources/Assets.xcassets --compile /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_dependencies --output-partial-info-plist /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 17.0 --platform iphoneos --bundle-identifier com.example.yuedu --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+2026-09-17T13:16:58.0900760Z /* com.apple.actool.compilation-results */
+2026-09-17T13:16:58.0901380Z /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+2026-09-17T13:16:58.0902200Z /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.h
+2026-09-17T13:16:58.0902990Z /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.swift
+2026-09-17T13:16:58.0903440Z 
+2026-09-17T13:16:58.0903440Z 
+2026-09-17T13:16:58.0903980Z CompileAssetCatalogVariant thinned /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app /Users/runner/work/ebook/ebook/YueDu/Resources/Assets.xcassets (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:16:58.0904670Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:16:58.0907210Z     /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/ebook/ebook/YueDu/Resources/Assets.xcassets --compile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 17.0 --platform iphoneos
+2026-09-17T13:17:02.8702910Z /* com.apple.actool.compilation-results */
+2026-09-17T13:17:02.8710330Z /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist_thinned
+2026-09-17T13:17:02.8711830Z /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/thinned/Assets.car
+2026-09-17T13:17:02.8722110Z 
+2026-09-17T13:17:02.8726380Z 
+2026-09-17T13:17:02.8727230Z SwiftDriver YueDu normal arm64 com.apple.xcode.tools.swift.compiler (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:02.8728900Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:17:02.8739240Z     builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name YueDu -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/runner/work/ebook/ebook/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos -F /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos -emit-localized-strings -emit-localized-strings-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64 -c -num-threads 5 -Xcc -ivfsstatcache -Xcc /Users/runner/work/ebook/ebook/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -output-file-map /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/ebook/ebook/build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-generated-files.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-own-target-headers.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-project-headers.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu-Swift.h -working-directory /Users/runner/work/ebook/ebook -no-emit-module-separately-wmo
+2026-09-17T13:17:02.8749120Z 
+2026-09-17T13:17:02.8755090Z SwiftCompile normal arm64 Compiling\ Book.swift,\ BookCoverView.swift,\ BookStorage.swift,\ BookshelfView.swift,\ ChapterListView.swift,\ DownloadService.swift,\ EPUBBook.swift,\ EPUBParser.swift,\ HTMLTextExtractor.swift,\ OPDSModels.swift,\ OPDSService.swift,\ ReaderSettings.swift,\ ReaderSettingsSheet.swift,\ ReaderView.swift,\ ReaderViewModel.swift,\ RootView.swift,\ ScrollOffsetObserver.swift,\ SettingsStore.swift,\ SettingsView.swift,\ StoreView.swift,\ YueDuApp.swift,\ ZIPArchive.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/ebook/ebook/YueDu/Models/Book.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/BookCoverView.swift /Users/runner/work/ebook/ebook/YueDu/Services/BookStorage.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/BookshelfView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ChapterListView.swift /Users/runner/work/ebook/ebook/YueDu/Services/DownloadService.swift /Users/runner/work/ebook/ebook/YueDu/Models/EPUBBook.swift /Users/runner/work/ebook/ebook/YueDu/Services/EPUBParser.swift /Users/runner/work/ebook/ebook/YueDu/Services/HTMLTextExtractor.swift /Users/runner/work/ebook/ebook/YueDu/Models/OPDSModels.swift /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift /Users/runner/work/ebook/ebook/YueDu/Models/ReaderSettings.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderSettingsSheet.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderViewModel.swift /Users/runner/work/ebook/ebook/YueDu/App/RootView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ScrollOffsetObserver.swift /Users/runner/work/ebook/ebook/YueDu/App/SettingsStore.swift /Users/runner/work/ebook/ebook/YueDu/Views/Settings/SettingsView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/StoreView.swift /Users/runner/work/ebook/ebook/YueDu/App/YueDuApp.swift /Users/runner/work/ebook/ebook/YueDu/Services/ZIPArchive.swift /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:02.8761110Z CompileSwift normal arm64 (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:02.8761360Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:17:02.8761520Z     
+2026-09-17T13:17:04.3854050Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:110:29: error: overlapping accesses to 'currentEntry', but modification requires exclusive access; consider copying to a local variable
+2026-09-17T13:17:04.3854900Z                 currentEntry?.acquisitionURL = currentEntry?.acquisitionURL ?? url
+2026-09-17T13:17:04.3855270Z                 ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3855610Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:110:60: note: conflicting access is here
+2026-09-17T13:17:04.3856060Z                 currentEntry?.acquisitionURL = currentEntry?.acquisitionURL ?? url
+2026-09-17T13:17:04.3856360Z                                                ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3856970Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:108:29: error: overlapping accesses to 'currentEntry', but modification requires exclusive access; consider copying to a local variable
+2026-09-17T13:17:04.3857640Z                 currentEntry?.coverURL = currentEntry?.coverURL ?? url
+2026-09-17T13:17:04.3857880Z                 ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3858200Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:108:54: note: conflicting access is here
+2026-09-17T13:17:04.3858610Z                 currentEntry?.coverURL = currentEntry?.coverURL ?? url
+2026-09-17T13:17:04.3858860Z                                          ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3859530Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:138:33: error: overlapping accesses to 'currentEntry', but modification requires exclusive access; consider copying to a local variable
+2026-09-17T13:17:04.3860720Z                     currentEntry?.title = currentEntry?.title.isEmpty == true ? text : currentEntry?.title ?? text
+2026-09-17T13:17:04.3861060Z                     ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3861390Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:138:55: note: conflicting access is here
+2026-09-17T13:17:04.3861890Z                     currentEntry?.title = currentEntry?.title.isEmpty == true ? text : currentEntry?.title ?? text
+2026-09-17T13:17:04.3862240Z                                           ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3862830Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:138:33: error: overlapping accesses to 'currentEntry', but modification requires exclusive access; consider copying to a local variable
+2026-09-17T13:17:04.3863700Z                     currentEntry?.title = currentEntry?.title.isEmpty == true ? text : currentEntry?.title ?? text
+2026-09-17T13:17:04.3864030Z                     ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3864360Z /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift:138:100: note: conflicting access is here
+2026-09-17T13:17:04.3864880Z                     currentEntry?.title = currentEntry?.title.isEmpty == true ? text : currentEntry?.title ?? text
+2026-09-17T13:17:04.3865490Z                                                                                        ~~~~~~~~~~~~^
+2026-09-17T13:17:04.3866130Z /Users/runner/work/ebook/ebook/YueDu/Services/ZIPArchive.swift:155:32: error: overlapping accesses to 'output', but modification requires exclusive access; consider copying to a local variable
+2026-09-17T13:17:04.3866810Z         let decodedSize: Int = output.withUnsafeMutableBytes { destinationBuffer in
+2026-09-17T13:17:04.3867170Z                                ^~~~~~
+2026-09-17T13:17:04.3867530Z /Users/runner/work/ebook/ebook/YueDu/Services/ZIPArchive.swift:167:28: note: conflicting access is here
+2026-09-17T13:17:04.3867890Z                     output.count,
+2026-09-17T13:17:04.3868040Z                     ~~~~~~~^~~~~
+2026-09-17T13:17:04.3868150Z 
+2026-09-17T13:17:04.3868210Z Failed frontend command:
+2026-09-17T13:17:04.3900350Z /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/runner/work/ebook/ebook/YueDu/Models/Book.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/BookCoverView.swift /Users/runner/work/ebook/ebook/YueDu/Services/BookStorage.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/BookshelfView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ChapterListView.swift /Users/runner/work/ebook/ebook/YueDu/Services/DownloadService.swift /Users/runner/work/ebook/ebook/YueDu/Models/EPUBBook.swift /Users/runner/work/ebook/ebook/YueDu/Services/EPUBParser.swift /Users/runner/work/ebook/ebook/YueDu/Services/HTMLTextExtractor.swift /Users/runner/work/ebook/ebook/YueDu/Models/OPDSModels.swift /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift /Users/runner/work/ebook/ebook/YueDu/Models/ReaderSettings.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderSettingsSheet.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderViewModel.swift /Users/runner/work/ebook/ebook/YueDu/App/RootView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ScrollOffsetObserver.swift /Users/runner/work/ebook/ebook/YueDu/App/SettingsStore.swift /Users/runner/work/ebook/ebook/YueDu/Views/Settings/SettingsView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/StoreView.swift /Users/runner/work/ebook/ebook/YueDu/App/YueDuApp.swift /Users/runner/work/ebook/ebook/YueDu/Services/ZIPArchive.swift /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.swift -supplementary-output-file-map /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/supplementaryOutputs-1 -emit-localized-strings -emit-localized-strings-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64 -target arm64-apple-ios17.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -I /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos -F /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos -no-color-diagnostics -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/runner/work/ebook/ebook/build/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -O -serialize-debugging-options -const-gather-protocols-file /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/ebook/ebook/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/ebook/ebook -resource-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -file-compilation-dir /Users/runner/work/ebook/ebook -Xcc -ivfsstatcache -Xcc /Users/runner/work/ebook/ebook/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-generated-files.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-own-target-headers.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-project-headers.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources -module-name YueDu -frontend-parseable-output -disable-clang-spi -target-sdk-version 18.5 -target-sdk-name iphoneos18.5 -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -in-process-plugin-server-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -num-threads 5 -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/Book.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/BookCoverView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/BookStorage.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/BookshelfView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ChapterListView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/DownloadService.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/EPUBBook.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/EPUBParser.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/HTMLTextExtractor.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/OPDSModels.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/OPDSService.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderSettings.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderSettingsSheet.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderViewModel.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/RootView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ScrollOffsetObserver.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/SettingsStore.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/SettingsView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/StoreView.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDuApp.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ZIPArchive.o -o /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/GeneratedAssetSymbols.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/Book.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/BookCoverView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/BookStorage.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/BookshelfView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ChapterListView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/DownloadService.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/EPUBBook.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/EPUBParser.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/HTMLTextExtractor.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/OPDSModels.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/OPDSService.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderSettings.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderSettingsSheet.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ReaderViewModel.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/RootView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ScrollOffsetObserver.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/SettingsStore.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/SettingsView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/StoreView.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDuApp.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/ZIPArchive.o -index-unit-output-path /YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/GeneratedAssetSymbols.o
+2026-09-17T13:17:04.3933840Z SwiftDriver\ Compilation YueDu normal arm64 com.apple.xcode.tools.swift.compiler (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.3934260Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:17:04.3955610Z     builtin-Swift-Compilation -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name YueDu -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -target arm64-apple-ios17.0 -g -module-cache-path /Users/runner/work/ebook/ebook/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos -F /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos -emit-localized-strings -emit-localized-strings-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64 -c -num-threads 5 -Xcc -ivfsstatcache -Xcc /Users/runner/work/ebook/ebook/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -output-file-map /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/ebook/ebook/build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-generated-files.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-own-target-headers.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/YueDu-project-headers.hmap -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/Objects-normal/arm64/YueDu-Swift.h -working-directory /Users/runner/work/ebook/ebook -no-emit-module-separately-wmo
+2026-09-17T13:17:04.3966250Z 
+2026-09-17T13:17:04.3966540Z LinkAssetCatalog /Users/runner/work/ebook/ebook/YueDu/Resources/Assets.xcassets (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.3966970Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:17:04.3970760Z     builtin-linkAssetCatalog --thinned /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/thinned --thinned-dependencies /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist_unthinned --output /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app --plist-output /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist
+2026-09-17T13:17:04.3974740Z note: Emplaced /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app/Assets.car (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.3975170Z 
+2026-09-17T13:17:04.3975750Z ProcessInfoPlistFile /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app/Info.plist /Users/runner/work/ebook/ebook/YueDu/Info.plist (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.3976390Z ** BUILD FAILED **
+2026-09-17T13:17:04.3976480Z 
+2026-09-17T13:17:04.3976480Z 
+2026-09-17T13:17:04.3976540Z The following build commands failed:
+2026-09-17T13:17:04.3976780Z 	CompileSwift normal arm64 (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.3985900Z 	SwiftCompile normal arm64 Compiling\ Book.swift,\ BookCoverView.swift,\ BookStorage.swift,\ BookshelfView.swift,\ ChapterListView.swift,\ DownloadService.swift,\ EPUBBook.swift,\ EPUBParser.swift,\ HTMLTextExtractor.swift,\ OPDSModels.swift,\ OPDSService.swift,\ ReaderSettings.swift,\ ReaderSettingsSheet.swift,\ ReaderView.swift,\ ReaderViewModel.swift,\ RootView.swift,\ ScrollOffsetObserver.swift,\ SettingsStore.swift,\ SettingsView.swift,\ StoreView.swift,\ YueDuApp.swift,\ ZIPArchive.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/ebook/ebook/YueDu/Models/Book.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/BookCoverView.swift /Users/runner/work/ebook/ebook/YueDu/Services/BookStorage.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/BookshelfView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ChapterListView.swift /Users/runner/work/ebook/ebook/YueDu/Services/DownloadService.swift /Users/runner/work/ebook/ebook/YueDu/Models/EPUBBook.swift /Users/runner/work/ebook/ebook/YueDu/Services/EPUBParser.swift /Users/runner/work/ebook/ebook/YueDu/Services/HTMLTextExtractor.swift /Users/runner/work/ebook/ebook/YueDu/Models/OPDSModels.swift /Users/runner/work/ebook/ebook/YueDu/Services/OPDSService.swift /Users/runner/work/ebook/ebook/YueDu/Models/ReaderSettings.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderSettingsSheet.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ReaderViewModel.swift /Users/runner/work/ebook/ebook/YueDu/App/RootView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Reader/ScrollOffsetObserver.swift /Users/runner/work/ebook/ebook/YueDu/App/SettingsStore.swift /Users/runner/work/ebook/ebook/YueDu/Views/Settings/SettingsView.swift /Users/runner/work/ebook/ebook/YueDu/Views/Bookshelf/StoreView.swift /Users/runner/work/ebook/ebook/YueDu/App/YueDuApp.swift /Users/runner/work/ebook/ebook/YueDu/Services/ZIPArchive.swift /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.3996020Z 	Building project YueDu with scheme YueDu and configuration Release
+2026-09-17T13:17:04.3996300Z (3 failures)
+2026-09-17T13:17:04.3996450Z     cd /Users/runner/work/ebook/ebook
+2026-09-17T13:17:04.3998240Z     builtin-infoPlistUtility /Users/runner/work/ebook/ebook/YueDu/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /Users/runner/work/ebook/ebook/build/Build/Intermediates.noindex/YueDu.build/Release-iphoneos/YueDu.build/assetcatalog_generated_info.plist -requiredArchitecture arm64 -o /Users/runner/work/ebook/ebook/build/Build/Products/Release-iphoneos/YueDu.app/Info.plist
+2026-09-17T13:17:04.4000330Z 
+2026-09-17T13:17:04.4000800Z note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'YueDu' from project 'YueDu')
+2026-09-17T13:17:04.4157090Z ##[error]Process completed with exit code 65.
+2026-09-17T13:17:04.4354790Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-17T13:17:04.4355950Z Post job cleanup.
+2026-09-17T13:17:04.5410340Z [command]/opt/homebrew/bin/git version
+2026-09-17T13:17:04.5501480Z git version 2.55.0
+2026-09-17T13:17:04.5521600Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/735f5725-821b-4953-8197-838cce18a902/.gitconfig'
+2026-09-17T13:17:04.5530780Z Temporarily overriding HOME='/Users/runner/work/_temp/735f5725-821b-4953-8197-838cce18a902' before making global git config changes
+2026-09-17T13:17:04.5532270Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-17T13:17:04.5537780Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/ebook/ebook
+2026-09-17T13:17:04.5618480Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-17T13:17:04.5684220Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-17T13:17:04.6573450Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-17T13:17:04.6627790Z http.https://github.com/.extraheader
+2026-09-17T13:17:04.6635420Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-17T13:17:04.6910000Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-17T13:17:04.7997220Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-17T13:17:04.8068520Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-17T13:17:04.8896240Z Cleaning up orphan processes
+2026-09-17T13:17:05.5330850Z Terminate orphan process: pid (2812) (ibtoold)
+2026-09-17T13:17:05.6435650Z Terminate orphan process: pid (2581) (ibtoold)
+2026-09-17T13:17:05.7432890Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

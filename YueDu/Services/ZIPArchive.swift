@@ -151,7 +151,8 @@ struct ZIPArchive {
         var wrapped = Data([0x78, 0x9C])
         wrapped.append(payload)
 
-        var output = Data(count: expectedSize + 64)
+        let outputCapacity = expectedSize + 64
+        var output = Data(count: outputCapacity)
         let decodedSize: Int = output.withUnsafeMutableBytes { destinationBuffer in
             guard let destinationPointer = destinationBuffer.bindMemory(to: UInt8.self).baseAddress else {
                 return 0
@@ -164,7 +165,7 @@ struct ZIPArchive {
 
                 return compression_decode_buffer(
                     destinationPointer,
-                    output.count,
+                    outputCapacity,
                     sourcePointer,
                     wrapped.count,
                     nil,
