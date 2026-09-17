@@ -3,7 +3,7 @@ import SwiftUI
 
 struct BookshelfView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Book.lastOpenedAt, order: .reverse) private var books: [Book]
+    @Query(sort: \Book.addedAt, order: .reverse) private var books: [Book]
 
     @State private var activeBook: Book?
     @State private var searchText = ""

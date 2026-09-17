@@ -78,7 +78,7 @@ struct ZIPArchive {
                 ?? ""
 
             if !name.isEmpty, !name.hasSuffix("/") {
-                entries[normalize(name)] = Entry(
+                entries[Self.normalize(name)] = Entry(
                     path: name,
                     compressionMethod: method,
                     compressedSize: compressedSize,
@@ -180,7 +180,7 @@ struct ZIPArchive {
         return Data(output.prefix(decodedSize))
     }
 
-    private func normalize(_ path: String) -> String {
+    private static func normalize(_ path: String) -> String {
         var normalized = path
         while normalized.hasPrefix("./") {
             normalized.removeFirst(2)

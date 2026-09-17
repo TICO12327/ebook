@@ -201,10 +201,19 @@ private struct ChapterPageView: View {
     let viewModel: ReaderViewModel
     @Binding var showControls: Bool
 
+    @State private var containerHeight: Double = 0
+    @State private var contentHeight: Double = 0
+    @State private var lastReportedOffset: Double = 0
+
     var body: some View {
         GeometryReader { proxy in
             ScrollViewReader { scrollProxy in
                 ScrollView {
+                    ScrollPositionReporter(coordinateSpaceName: scrollSpaceName)
+                        .onPreferenceChange(ScrollOffsetPreferenceKey.self) { offset in
+                            handleOffset(offset)
+                        }
+
                     VStack(alignment: .leading, spacing: settingsStore.readerSettings.paragraphSpacing) {
                         Text(chapter.title)
                             .font(settingsStore.readerSettings.fontFamily.font(
@@ -229,20 +238,27 @@ private struct ChapterPageView: View {
                     .padding(.horizontal, settingsStore.readerSettings.horizontalPadding)
                     .padding(.top, 24)
                     .padding(.bottom, 140)
+                    .background(
+                        GeometryReader { contentProxy in
+                            Color.clear
+                                .onAppear {
+                                    contentHeight = contentProxy.size.height
+                                }
+                                .onChange(of: contentProxy.size.height) { _, newValue in
+                                    contentHeight = newValue
+                                }
+                        }
+                    )
                 }
+                .coordinateSpace(name: scrollSpaceName)
                 .scrollIndicators(.hidden)
                 .onTapGesture {
                     withAnimation(.snappy(duration: 0.2)) {
                         showControls.toggle()
                     }
                 }
-                .onScrollGeometryChange(for: Double.self) { geometry in
-                    let scrollable = max(geometry.contentSize.height - geometry.containerSize.height, 1)
-                    return max(0, min(1, geometry.contentOffset.y / scrollable))
-                } action: { _, newValue in
-                    viewModel.updateScrollPosition(chapterIndex: chapterIndex, offset: newValue)
-                }
                 .onAppear {
+                    containerHeight = proxy.size.height
                     let targetIndex = viewModel.paragraphIndex(for: chapterIndex, paragraphCount: paragraphs.count)
                     guard targetIndex > 0 else { return }
 
@@ -250,8 +266,25 @@ private struct ChapterPageView: View {
                         scrollProxy.scrollTo(paragraphID(targetIndex), anchor: .top)
                     }
                 }
+                .onChange(of: proxy.size.height) { _, newValue in
+                    containerHeight = newValue
+                }
             }
         }
+    }
+
+    private var scrollSpaceName: String {
+        "chapter-scroll-\(chapterIndex)"
+    }
+
+    private func handleOffset(_ offset: Double) {
+        guard contentHeight > 0, containerHeight > 0 else { return }
+        let scrollable = max(contentHeight - containerHeight, 1)
+        let normalized = max(0, min(1, offset / scrollable))
+
+        guard abs(normalized - lastReportedOffset) > 0.002 else { return }
+        lastReportedOffset = normalized
+        viewModel.updateScrollPosition(chapterIndex: chapterIndex, offset: normalized)
     }
 
     private func paragraphID(_ index: Int) -> String {
