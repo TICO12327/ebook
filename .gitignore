@@ -7,3 +7,4 @@ Pods/
 .build/
 Payload/
 *.ipa
+build_log.txt
